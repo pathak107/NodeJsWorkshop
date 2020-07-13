@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wikipedia</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <nav>
+        <a class="nav-link" href="/">Home</a> |
+        <a class="nav-link" href="/newArticle">New Article</a> |
+        <a class="nav-link" href="/articles">Articles</a> |
+    </nav>
+    <h1 class="main-heading">Articles</h1>
+    <br>
+    <div class="articles-list">
+
+        <%  for(var i=0; i< Articles.length; i++)  { %>
+            <div class="article-card">
+                <a class="article-text" href="/articles/<%=Articles[i].id%>"> <%= Articles[i].title %> </a>
+            </div>
+        <% } %>
+
+    </div>
+</body>
+</html>
